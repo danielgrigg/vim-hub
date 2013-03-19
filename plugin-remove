@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+  echo "Usage: $0 <plugin-name>"; exit 1
+fi
+
+if [ ! -d bundle ]; then
+  echo "No plugins installed!"
+  exit 1
+fi
+
+REPO=$1
+REPO_PATH=bundle/$REPO
+
+rm -rf $REPO_PATH
+git rm $REPO_PATH
+git commit -m "Remove the $REPO plugin."
