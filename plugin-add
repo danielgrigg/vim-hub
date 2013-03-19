@@ -4,6 +4,10 @@ if [ -z $1 ]; then
   echo "Usage: $0 <plugin-repo-url>"; exit 1
 fi
 
+if [ ! -d bundle ]; then
+  mkdir bundle
+fi
+
 REPO=`basename $1`
 REPO=${REPO%%.*}
 REPO_PATH=bundle/$REPO
