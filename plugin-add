@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+  echo "Usage: $0 <plugin-repo-url>"; exit 1
+fi
+
+REPO=`basename $1`
+REPO=${REPO%%.*}
+REPO_PATH=bundle/$REPO
+
+git submodule add $1 $REPO_PATH
+git add $REPO_PATH
+git commit -m "Add the $REPO plugin."
