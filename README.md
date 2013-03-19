@@ -1,3 +1,3 @@
-vim-daniel-grigg
+vim-hub
 
-Daniel's relocatable vim config.
+A relocatable vim config.
