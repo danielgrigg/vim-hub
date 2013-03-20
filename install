@@ -5,3 +5,5 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ln -shF $SCRIPT_DIR ~/.vim
 ln -sf $SCRIPT_DIR/vimrc ~/.vimrc
 ln -sf $SCRIPT_DIR/gvimrc ~/.gvimrc
+git submodule update --init
+

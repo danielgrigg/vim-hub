@@ -2,3 +2,10 @@
 
 echo "Updating pathogen..."
 curl -Sso autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+
+for d in `ls bundle`; do
+  cd bundle\$d
+
+  #TODO - resolve conflicts
+  git pull origin master
+done

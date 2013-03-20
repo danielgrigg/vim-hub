@@ -14,4 +14,4 @@ REPO_PATH=bundle/$REPO
 
 git submodule add $1 $REPO_PATH
 git add $REPO_PATH
-git commit -m "Add the $REPO plugin."
+git commit -m "Added $1 to $REPO."
