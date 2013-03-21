@@ -1,0 +1,5 @@
+#!/bin/bash
+
+
+find bundle -type d -depth 1 -exec git --git-dir {}/.git remote -v \; \
+| grep fetch | awk ' {print $2} '

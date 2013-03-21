@@ -12,6 +12,11 @@ REPO=`basename $1`
 REPO=${REPO%%.*}
 REPO_PATH=bundle/$REPO
 
+if [ -d $REPO_PATH ]; then
+  echo "The $REPO plugin is already installed."
+  exit 1
+fi
+
 git submodule add $1 $REPO_PATH
 git add $REPO_PATH
 git commit -m "Added $1 to $REPO."

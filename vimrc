@@ -8,7 +8,7 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gno
 endif
 
 " Colors
-"" colorscheme zenburn
+colorscheme zenburn
 
 " Settings
 :set incsearch
