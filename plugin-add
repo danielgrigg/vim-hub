@@ -18,5 +18,6 @@ if [ -d $REPO_PATH ]; then
 fi
 
 git submodule add $1 $REPO_PATH
+git --git-dir $REPO_PATH/.git pull origin master
 git add $REPO_PATH
 git commit -m "Added $1 to $REPO."
