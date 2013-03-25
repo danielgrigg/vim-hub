@@ -2,8 +2,16 @@
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-ln -shF $SCRIPT_DIR ~/.vim
-ln -sf $SCRIPT_DIR/vimrc ~/.vimrc
-ln -sf $SCRIPT_DIR/gvimrc ~/.gvimrc
+function replace-vim-file {
+  if [ -e ~/$1 ]; then
+    mv -f ~/$1 ~/$1.old
+  fi
+  ln -s $SCRIPT_DIR/$2 ~/$1
+}
+
+replace-vim-file .vim
+replace-vim-file .vimrc vimrc
+replace-vim-file .gvimrc gvimrc
+
 git submodule update --init --quiet
 
