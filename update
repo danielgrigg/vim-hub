@@ -1,0 +1,13 @@
+#!/bin/bash
+
+PATHOGEN_MD5=`md5 -q autoload/pathogen.vim`
+curl -Sso /tmp/pathogen.vim.hub https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+PATHOGEN_NEW_MD5=`md5 -q /tmp/pathogen.vim.hub`
+if [[ $PATHOGEN_MD5 != $PATHOGEN_NEW_MD5 ]]; then
+  cp /tmp/pathogen.vim.hub autoload/pathogen.vim
+  git add autoload/pathogen.vim
+  git commit --quiet -m "Update pathogen"
+fi
+git pull --recurse-submodules
+git submodule update --recursive
+
