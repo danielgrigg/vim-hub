@@ -49,3 +49,8 @@ colorscheme zenburn
 
 " File types
 au BufNewFile,BufRead *.fsh,*.vsh,*.gl,*.glsl setlocal ft=glsl
+
+" Insert newline then return to command mode
+map <CR> o<Esc>
+
+nnoremap <C-J> a<CR><Esc>k$
