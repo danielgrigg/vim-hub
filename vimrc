@@ -16,7 +16,7 @@ colorscheme zenburn
 :set smartcase
 :set hlsearch
 :set expandtab tabstop=2 shiftwidth=2 softtabstop=2
-
+:set clipboard=unnamed
 
 " Key bindings
 :nmap \l :setlocal number!<CR>
