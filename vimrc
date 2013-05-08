@@ -16,7 +16,10 @@ colorscheme zenburn
 :set smartcase
 :set hlsearch
 :set expandtab tabstop=2 shiftwidth=2 softtabstop=2
-:set clipboard=unnamed
+:set autochdir
+set clipboard=unnamed
+set nowrap
+" set spell " use ]s and [s to navigate
 
 " Key bindings
 :nmap \l :setlocal number!<CR>
