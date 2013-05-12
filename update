@@ -9,6 +9,6 @@ if [[ $PATHOGEN_MD5 != $PATHOGEN_NEW_MD5 ]]; then
   git add autoload/pathogen.vim
   git commit --quiet -m "Update pathogen"
 fi
-git pull --recurse-submodules
-git submodule update --recursive
+git pull --quiet --recurse-submodules
+git submodule --quiet update --recursive
 
