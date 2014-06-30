@@ -9,9 +9,6 @@ will integrate the repo with an existing vim installation.
 
 ## Adding/Removing plugins
 
-vim-hub relies on pathogen for plugin management but supplies a 
-lightweight frontend via 'plugin-add' and 'plugin-remove'.
-
 ./plugin-add <git-repo-url>
 ./plugin-remove <plugin-name>
 

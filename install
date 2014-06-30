@@ -13,5 +13,5 @@ replace-vim-file .vim
 replace-vim-file .vimrc vimrc
 replace-vim-file .gvimrc gvimrc
 
-git submodule update --init --quiet
+#git submodule update --init --quiet
 

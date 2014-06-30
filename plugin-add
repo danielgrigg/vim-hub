@@ -1,7 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+function usage {
+  echo "Usage: $0 <plugin-repo-url>"; exit 1
+  echo "Example: "
+  echo "    ./plugin-add https://github.com/gmarik/Vundle.vim.git"
+}
 
 if [ -z $1 ]; then
-  echo "Usage: $0 <plugin-repo-url>"; exit 1
+  usage
 fi
 
 if [ ! -d bundle ]; then
@@ -9,11 +15,14 @@ if [ ! -d bundle ]; then
 fi
 
 REPO=`basename $1`
-REPO=${REPO%%.*}
+if [[ "$REPO" =~ ".git" ]]; then
+  REPO=${REPO%%.*}
+fi
 REPO_PATH=bundle/$REPO
 
 if [ -d $REPO_PATH ]; then
-  echo "The $REPO plugin is already installed."
+  echo "The $REPO plugin is already installed!"
+  usage
   exit 1
 fi
 
