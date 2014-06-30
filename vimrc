@@ -1,21 +1,48 @@
-syntax on
-filetype plugin indent on
+set nocompatible
+filetype off
+
+" Vundle stuff
+"
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+
+" all of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" To ignore plugin indent changes, instead use:
+" "filetype plugin on
+" "
+" " Brief help
+" " :PluginList          - list configured plugins
+" " :PluginInstall(!)    - install (update) plugins
+" " :PluginSearch(!) foo - search (or refresh cache first) for foo
+" " :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+" "
+" " see :h vundle for more details or wiki for FAQ
 
 " Terminal settings
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
 	set t_Co=256
 endif
 
+
 " Colors
 "colorscheme zenburn
 
 " Settings
-:set incsearch
-:set ignorecase
-:set smartcase
-:set hlsearch
-:set expandtab tabstop=2 shiftwidth=2 softtabstop=2
-:set autochdir
+syntax enable
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+set autochdir
 set clipboard=unnamed
 set nowrap
 " set spell " use ]s and [s to navigate

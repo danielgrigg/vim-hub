@@ -14,9 +14,9 @@ if [ ! -d bundle ]; then
   mkdir bundle
 fi
 
-REPO=`basename $1`
+REPO=$(basename $1)
 if [[ "$REPO" =~ ".git" ]]; then
-  REPO=${REPO%%.*}
+  REPO=${REPO%.*}
 fi
 REPO_PATH=bundle/$REPO
 
