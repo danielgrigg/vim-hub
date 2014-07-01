@@ -10,6 +10,32 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-surround'      
+
+" http://vimawesome.com/plugin/syntastic
+Plugin 'scrooloose/syntastic' 
+
+" http://vimawesome.com/plugin/ctrlp-vim-state-of-grace
+Plugin 'kien/ctrlp.vim' 
+
+" http://vimawesome.com/plugin/syntastic
+Plugin 'scrooloose/nerdcommenter' 
+
+" http://vimawesome.com/plugin/syntastic
+Plugin 'majutsushi/tagbar'
+
+" http://vimawesome.com/plugin/ack-vim
+Plugin 'mileszs/ack.vim'
+
+" http://vimawesome.com/plugin/supertab
+Plugin 'ervandew/supertab'
+
+" http://vimawesome.com/plugin/easymotion
+Plugin 'Lokaltog/vim-easymotion'
+
+" http://vimawesome.com/plugin/vim-airline-sad-beautiful-tragic
+Plugin 'bling/vim-airline'
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,9 +74,19 @@ set nowrap
 " set spell " use ]s and [s to navigate
 
 " Key bindings
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Syntastic
+" https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers
+let g:syntastic_python_checkers = ['frosted'] 
+
+" MISC
 :nmap \l :setlocal number!<CR>
 :nmap \o :set paste!<CR>
-:nmap \q :nolsearch<CR>
+:nmap \q :nohlsearch<CR>
 
 " Wrap independent up/down
 :nmap j gj
@@ -62,19 +98,6 @@ set nowrap
 :nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
 :nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 :nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
-
-" Emacs bindings oh my!
-:cnoremap <C-a>  <Home>
-:cnoremap <C-b>  <Left>
-:cnoremap <C-f>  <Right>
-:cnoremap <C-d>  <Delete>
-:cnoremap <M-b>  <S-Left>
-:cnoremap <M-f>  <S-Right>
-:cnoremap <M-d>  <S-right><Delete>
-:cnoremap <Esc>b <S-Left>
-:cnoremap <Esc>f <S-Right>
-:cnoremap <Esc>d <S-right><Delete>
-:cnoremap <C-g>  <C-c>
 
 " File types
 au BufNewFile,BufRead *.fsh,*.vsh,*.gl,*.glsl setlocal ft=glsl
