@@ -17,6 +17,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic' 
 
 " http://vimawesome.com/plugin/ctrlp-vim-state-of-grace
+" Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
+" :help ctrlp-commands and :help ctrlp-extensions 
 Plugin 'kien/ctrlp.vim' 
 
 " http://vimawesome.com/plugin/syntastic
@@ -37,8 +39,50 @@ Plugin 'Lokaltog/vim-easymotion'
 " http://vimawesome.com/plugin/vim-airline-sad-beautiful-tragic
 Plugin 'bling/vim-airline'
 
+" http://vimawesome.com/plugin/fsharp-vim-ours
+" VIM RUNTIME FILES FOR F# (FSHARP)
+Plugin 'kongo2002/fsharp-vim'
+
+" http://vimawesome.com/plugin/python-mode
+Plugin 'klen/python-mode'
+
+" http://vimawesome.com/plugin/jedi-vim
+Plugin 'davidhalter/jedi-vim'
+
+" http://vimawesome.com/plugin/xmledit
+Plugin 'sukima/xmledit'
+
+" Color schemes
+"
+" http://vimawesome.com/plugin/jellybeans-vim
+" A colorful, dark color scheme, inspired by ir_black and twilight.
+Plugin 'nanotech/jellybeans.vim'
+
+" http://vimawesome.com/plugin/vim-colors-solarized-sparks-fly
+Plugin 'altercation/vim-colors-solarized'
+
+" http://vimawesome.com/plugin/molokai
+Plugin 'tomasr/molokai'
+
+" http://vimawesome.com/plugin/vividchalk-vim
+Plugin 'tpope/vim-vividchalk'
+
+" http://vimawesome.com/plugin/unite-colorscheme
+Plugin 'ujihisa/unite-colorscheme'
+
+" http://vimawesome.com/plugin/vim-tomorrow-theme-all-too-well
+Plugin 'chriskempson/vim-tomorrow-theme'
+
+" http://vimawesome.com/plugin/zenburn
+Plugin 'Zenburn'
+
+" http://vimawesome.com/plugin/hemisu-vim
+Plugin 'noahfrederick/vim-hemisu'
+
+
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
+
 filetype plugin indent on    " required
 
 " To ignore plugin indent changes, instead use:
@@ -57,6 +101,7 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gno
 	set t_Co=256
 endif
 
+colorscheme jellybeans
 
 " Colors
 "colorscheme zenburn
@@ -71,9 +116,37 @@ set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 set autochdir
 set clipboard=unnamed
 set nowrap
+
+
 " set spell " use ]s and [s to navigate
 
-" Key bindings
+" Ack-vim http://vimawesome.com/plugin/ack-vim
+" o    to open (same as enter)
+" O    to open and close quickfix window
+" go   to preview file (open but maintain focus on ack.vim results)
+" t    to open in new tab
+" T    to open in new tab silently
+" h    to open in horizontal split
+" H    to open in horizontal split silently
+" v    to open in vertical split
+" gv   to open in vertical split silently
+" q    to close the quickfix window
+
+
+" plugin tagbar
+" Tagbar is a vim plugin for browsing the tags of source code files.
+" http://vimawesome.com/plugin/tagbar
+
+" plugin the-nerd-commenter
+"
+" http://vimawesome.com/plugin/the-nerd-commenter
+
+
+" Airline
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+set laststatus=2
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -88,6 +161,7 @@ let g:syntastic_python_checkers = ['frosted']
 :nmap \o :set paste!<CR>
 :nmap \q :nohlsearch<CR>
 
+
 " Wrap independent up/down
 :nmap j gj
 :nmap k gk
@@ -101,6 +175,7 @@ let g:syntastic_python_checkers = ['frosted']
 
 " File types
 au BufNewFile,BufRead *.fsh,*.vsh,*.gl,*.glsl setlocal ft=glsl
+au BufRead,BufNewFile *.fsx,*.fs set filetype=fsharp
 
 " Insert newline then return to command mode
 map <CR> o<Esc>
@@ -149,4 +224,4 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 " Don't autofold code
 let g:pymode_folding = 0
 
-autocmd FileType py setlocal shiftwidth=4 tabstop=4 shiftround
+"autocmd FileType py setlocal shiftwidth=4 tabstop=4 "shiftround
