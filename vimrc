@@ -79,6 +79,13 @@ Plugin 'Zenburn'
 " http://vimawesome.com/plugin/hemisu-vim
 Plugin 'noahfrederick/vim-hemisu'
 
+Plugin 'wincent/Command-T'
+
+" haskell
+Plugin 'lukerandall/haskellmode-vim'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'eagletmt/neco-ghc'
+
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -225,3 +232,7 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 let g:pymode_folding = 0
 
 "autocmd FileType py setlocal shiftwidth=4 tabstop=4 "shiftround
+
+" haskellmode
+au BufEnter *.hs compiler ghc
+let g:haddock_browser="/Applications/Safari.app/Contents/MacOS/Safari"
