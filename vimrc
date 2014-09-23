@@ -52,6 +52,15 @@ Plugin 'davidhalter/jedi-vim'
 " http://vimawesome.com/plugin/xmledit
 Plugin 'sukima/xmledit'
 
+" http://vimawesome.com/plugin/matchtag
+Plugin 'gregsexton/MatchTag'
+
+" http://vimawesome.com/plugin/matchit-zip
+Plugin 'matchit.zip'
+
+" http://vimawesome.com/plugin/vim-scala
+Plugin 'derekwyatt/vim-scala'
+
 " Color schemes
 "
 " http://vimawesome.com/plugin/jellybeans-vim
@@ -224,4 +233,4 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 " Don't autofold code
 let g:pymode_folding = 0
 
-"autocmd FileType py setlocal shiftwidth=4 tabstop=4 "shiftround
+"let g:ackprg = 'ag --nogroup --nocolor --column'
