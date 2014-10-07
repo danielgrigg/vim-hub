@@ -86,6 +86,9 @@ Plugin 'lukerandall/haskellmode-vim'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'eagletmt/neco-ghc'
 
+" gradle as groovy
+Plugin 'tfnico/vim-gradle'
+
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
