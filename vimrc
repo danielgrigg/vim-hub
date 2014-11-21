@@ -89,6 +89,7 @@ Plugin 'eagletmt/neco-ghc'
 " gradle as groovy
 Plugin 'tfnico/vim-gradle'
 
+Plugin 'ekalinin/Dockerfile.vim'
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
