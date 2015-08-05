@@ -61,6 +61,8 @@ Plugin 'matchit.zip'
 " http://vimawesome.com/plugin/vim-scala
 Plugin 'derekwyatt/vim-scala'
 
+Plugin 'othree/html5.vim'
+
 " Color schemes
 "
 " http://vimawesome.com/plugin/jellybeans-vim
@@ -88,6 +90,18 @@ Plugin 'Zenburn'
 " http://vimawesome.com/plugin/hemisu-vim
 Plugin 'noahfrederick/vim-hemisu'
 
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'guns/vim-clojure-highlight'
+Plugin 'dgrnbrg/vim-redl'
+
+Plugin 'rdolgushin/groovy.vim'
+Plugin 'tfnico/vim-gradle'
+
+Plugin 'rodjek/vim-puppet'
+
+Plugin 'leafgarland/typescript-vim'
+Plugin 'clausreinke/typescript-tools'
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
