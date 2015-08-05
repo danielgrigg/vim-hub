@@ -90,18 +90,17 @@ Plugin 'Zenburn'
 " http://vimawesome.com/plugin/hemisu-vim
 Plugin 'noahfrederick/vim-hemisu'
 
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
-Plugin 'guns/vim-clojure-highlight'
-Plugin 'dgrnbrg/vim-redl'
+Plugin 'wincent/Command-T'
 
-Plugin 'rdolgushin/groovy.vim'
+" haskell
+Plugin 'lukerandall/haskellmode-vim'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'eagletmt/neco-ghc'
+
+" gradle as groovy
 Plugin 'tfnico/vim-gradle'
 
-Plugin 'rodjek/vim-puppet'
-
-Plugin 'leafgarland/typescript-vim'
-Plugin 'clausreinke/typescript-tools'
+Plugin 'ekalinin/Dockerfile.vim'
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -247,4 +246,8 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 " Don't autofold code
 let g:pymode_folding = 0
 
-"let g:ackprg = 'ag --nogroup --nocolor --column'
+"autocmd FileType py setlocal shiftwidth=4 tabstop=4 "shiftround
+
+" haskellmode
+au BufEnter *.hs compiler ghc
+let g:haddock_browser="/Applications/Safari.app/Contents/MacOS/Safari"
