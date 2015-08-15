@@ -14,17 +14,15 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'      
 
 " http://vimawesome.com/plugin/syntastic
-Plugin 'scrooloose/syntastic' 
+" Plugin 'scrooloose/syntastic' 
 
 " http://vimawesome.com/plugin/ctrlp-vim-state-of-grace
 " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
 " :help ctrlp-commands and :help ctrlp-extensions 
 Plugin 'kien/ctrlp.vim' 
 
-" http://vimawesome.com/plugin/syntastic
 Plugin 'scrooloose/nerdcommenter' 
 
-" http://vimawesome.com/plugin/syntastic
 Plugin 'majutsushi/tagbar'
 
 " http://vimawesome.com/plugin/ack-vim
@@ -62,6 +60,8 @@ Plugin 'matchit.zip'
 Plugin 'derekwyatt/vim-scala'
 
 Plugin 'othree/html5.vim'
+
+Plugin 'othree/javascript-libraries-syntax.vim'
 
 " Color schemes
 "
@@ -176,7 +176,16 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Syntastic
 " https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers
-let g:syntastic_python_checkers = ['frosted'] 
+" let g:syntastic_python_checkers = ['frosted'] 
+" let g:syntastic_html_tidy_exec = 'tidy5'
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 " MISC
 :nmap \l :setlocal number!<CR>
