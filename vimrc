@@ -102,6 +102,8 @@ Plugin 'tfnico/vim-gradle'
 
 Plugin 'ekalinin/Dockerfile.vim'
 
+Plugin 'rust-lang/rust.vim'
+
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
 
