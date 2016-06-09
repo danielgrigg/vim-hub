@@ -9,10 +9,7 @@ will integrate the repo with an existing vim installation.
 
 ## Adding/Removing plugins
 
-./plugin-add <git-repo-url>
-./plugin-remove <plugin-name>
-
-Where 'plugin-name' matches its git repo name.
+Just use vundle. Add the plugin directly to vimrc.
 
 ## Updating
 Running 'update' will update pathogen and all your installed plugins.
