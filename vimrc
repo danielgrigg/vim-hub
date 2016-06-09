@@ -104,6 +104,12 @@ Plugin 'ekalinin/Dockerfile.vim'
 
 Plugin 'rust-lang/rust.vim'
 
+Plugin 'moll/vim-node'
+
+Plugin 'godlygeek/tabular'
+
+Plugin 'pangloss/vim-javascript'
+
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -199,16 +205,11 @@ map <C-n> :NERDTreeToggle<CR>
 :nmap j gj
 :nmap k gk
 
-" Play nicely with others, even if they're wrong ;)
-:nmap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
-:nmap \T :set expandtab tabstop=8 shiftwidth=8 softtabstop=4<CR>
-:nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
-:nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
-:nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
-
 " File types
 au BufNewFile,BufRead *.fsh,*.vsh,*.gl,*.glsl setlocal ft=glsl
 au BufRead,BufNewFile *.fsx,*.fs set filetype=fsharp
+au BufRead,BufNewFile *.json set filetype=javascript
+
 
 " Insert newline then return to command mode
 map <CR> o<Esc>
