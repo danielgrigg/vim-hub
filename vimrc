@@ -102,13 +102,17 @@ Plugin 'tfnico/vim-gradle'
 
 Plugin 'ekalinin/Dockerfile.vim'
 
-Plugin 'rust-lang/rust.vim'
-
 Plugin 'moll/vim-node'
 
 Plugin 'godlygeek/tabular'
 
 Plugin 'pangloss/vim-javascript'
+
+Plugin 'rust-lang/rust.vim'
+
+Plugin 'nginx.vim'
+Plugin 'maxmellon/vim-jsx-pretty'
+
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -263,3 +267,19 @@ let g:pymode_folding = 0
 " haskellmode
 au BufEnter *.hs compiler ghc
 let g:haddock_browser="/Applications/Safari.app/Contents/MacOS/Safari"
+
+au BufRead,BufNewFile *.rs set filetype=rust
+
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+
+nnoremap Q gq}
+
+autocmd BufRead,BufNewFile *.txt,*.asciidoc,README,TODO,CHANGELOG,NOTES,ABOUT
+        \ setlocal autoindent expandtab tabstop=8 softtabstop=2 shiftwidth=2 filetype=asciidoc
+        \ textwidth=70 wrap formatoptions=tcqn
+        \ formatlistpat=^\\s*\\d\\+\\.\\s\\+\\\\|^\\s*<\\d\\+>\\s\\+\\\\|^\\s*[a-zA-Z.]\\.\\s\\+\\\\|^\\s*[ivxIVX]\\+\\.\\s\\+
+        \ comments=s1:/*,ex:*/,://,b:#,:%,:XCOMM,fb:-,fb:*,fb:+,fb:.,fb:>
+
+
